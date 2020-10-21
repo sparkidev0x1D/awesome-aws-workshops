@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 
 {% block extrahead %}
+    <!-- Google Tag Manager -->
+    <script data-ad-client="ca-pub-1923834486996267" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    <!-- End Google Tag Manager -->
 
   <meta property="og:url" content="http://awesome-aws-workshops.com">
   {% if page and page.meta and page.meta.title %}
@@ -10,10 +14,18 @@
   {% else %}
     <meta property="og:title" content="{{ config.site_name }}">
   {% endif %}
+  {% if page and page.meta.site_description%}
   <meta property="og:description" content="{{ page.meta.site_description }}">
+  <meta property="description" content="{{ page.meta.site_description }}">
+  {% endif %}
+  {% if page and page.meta.ogimage%}
   <meta property="og:image" content="{{ page.meta.ogimage }}">
+  {% endif %}
+  {% if page and page.meta.ogimagealt%}
   <meta property="og:image:alt" content="{{ page.meta.ogimagealt }}">
   <meta property="og:image:type" content="image/png">
+  {% endif %}
+  
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@dgomesbr">
@@ -25,21 +37,57 @@
   {% else %}
     <meta property="twitter:title" content="{{ config.site_name }}">
   {% endif %}
+  {% if page and page.meta.site_description%}
   <meta name="twitter:description" content="{{ page.meta.site_description }}">
+  {% endif %}
+  {% if page and page.meta.ogimage%}
   <meta name="twitter:image" content="{{ page.meta.ogimage }}">
+  {% endif %}
+  {% if page and page.meta.ogimagealt%}
   <meta name="twitter:image:alt" content="{{ page.meta.ogimagealt }}">
+  {% endif %}
 
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN1Q3QKGDD"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-
-gtag('config', 'G-ZN1Q3QKGDD');
-</script>
+  <!-- Pixel Code for https://app.analyzz.com/ -->
+  <script async src="https://app.analyzz.com/pixel/2SV5cViK04diKtw7"></script>
+  <!-- END Pixel Code -->
 {% endblock %}
+
+{% block footer %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZN1Q3QKGDD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ZN1Q3QKGDD');
+        window.onload=function(){var e=document.documentElement||document.body,t=function(e,t,n){if(null!==(t=(e=e||Event).target||e.srcElement).getAttribute("href")&&"#"!==t.getAttribute("href").charAt(0)&&0!==t.getAttribute("href").indexOf("../")&&"a"==String(t.nodeName).toLowerCase()){e.preventDefault&&e.preventDefault();var r="?";return 0===t.href.indexOf("?")&&(r="&"),window.location=t.href+r+"source=awesomeawsworkshops&utm_source=awesomeawsworkshops&utm_medium=listinglink",e.returnValue=!1}};e.addEventListener?e.addEventListener("click",t,!0):e.attachEvent("onclick",t)};
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X3C6QV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml            : true,
+            version          : 'v8.0'
+          });
+        };
+
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- Your Chat Plugin code -->
+      <div class="fb-customerchat" attribution=setup_tool page_id="104953184679166" theme_color="#CB006D"></div>
+    {% endblock %}
