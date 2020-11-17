@@ -7,7 +7,7 @@ ogimagealt: Awesome AWS Workshops - Build On!
 
 # **Awesome AWS Workshops**
 
-![Awesome AWS Banner](https://awesome-aws-workshops.com/assets/img/awesomebanner.png)
+[![Deprecation Notice](https://awesome-aws-workshops.com/assets/img/deprecation.png)](https://workshops.aws/?source=awesomeawsworkshops&utm_source=awesomeawsworkshops&utm_medium=deprecation-notice)
 
 ![deploy](https://github.com/dgomesbr/awesome-aws-workshops/workflows/deploy/badge.svg)
 ![last-updated](https://img.shields.io/github/last-commit/dgomesbr/awesome-aws-workshops?color=CB006D&label=last%20updated)
@@ -357,7 +357,6 @@ your focus to scaling and innovating your business._
 - [Adding Security into DevOps](https://devops.awssecworkshops.com/)
 - [An AWS Security Odyssey](https://github.com/aws-samples/aws-security-odyssey/tree/master/SID402Workshop)
 - [AWS Identity: Using Amazon Cognito for serverless consumer apps](https://serverless-idm.awssecworkshops.com/)
-- [AWS Protecting Workloads Workshops](http://protecting-workloads.awssecworkshops.com/)
 - [AWS Protecting Workloads Workshops](https://protecting-workloads.awssecworkshops.com/)
 - [AWS Security Hub Workshop](https://github.com/aws-samples/aws-security-hub-workshop)
 - [AWS Security Workshops (*MULTIPLE MODULES*)](https://awssecworkshops.com/)
